@@ -11,6 +11,7 @@ import javafx.scene.input.KeyCombination;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class HelloController {
     @FXML
@@ -20,8 +21,38 @@ public class HelloController {
     @FXML
     Button signup;
     @FXML
-    public void setExit(){
+    public void setExit() throws SQLException {
         Platform.exit();
+        for(int i = 0; i< User.users.size();i++)
+        {
+            HelloApplication.Connect.UpdateWallet(User.users.get(i).getUsername(),User.users.get(i).getLevel(),User.users.get(i).coins,User.users.get(i).getXp());
+        }
+        for (User user : User.users) {
+            String OwnedCards = "";
+            for (int i = 0; i < user.cards.size();i++) {
+                OwnedCards += user.cards.get(i).number;
+                if(i!=(user.cards.size()-1))
+                {
+                    OwnedCards += "-";
+                }
+            }
+            if(!user.cards.isEmpty()) {
+                HelloApplication.Connect.UpdateUserCards(user.getUsername(), OwnedCards);
+            }
+        }
+        for (User user : User.users) {
+            String UpCards = "";
+            for (int i = 0; i < user.UpgradeCards.size();i++) {
+                UpCards += user.UpgradeCards.get(i);
+                if(i!=(user.UpgradeCards.size()-1))
+                {
+                    UpCards += "-";
+                }
+            }
+            if(!user.UpgradeCards.isEmpty()) {
+                HelloApplication.Connect.UpdateUserUpgradedCards(user.getUsername(), UpCards);
+            }
+        }
     }
     @FXML
     public void setLogin(){
