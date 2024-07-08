@@ -48,7 +48,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" onAction="#setChange" style="-fx-background-radius: 7;" text="change profile" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="change" mnemonicParsing="false" onAction="#setChange" style="-fx-background-radius: 7;" text="change profile" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
       <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
