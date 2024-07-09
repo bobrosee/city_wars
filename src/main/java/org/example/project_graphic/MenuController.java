@@ -94,6 +94,28 @@ public class MenuController implements Initializable {
             e.printStackTrace();
         }
     }
+    @FXML
+    public void setStore() throws IOException {
+        try{
+        Parent root = FXMLLoader.load(getClass().getResource("store1.fxml"));
+
+        // Create a new scene with the loaded parent
+        Scene scene = new Scene(root);
+//                scene.getStylesheets().add(getClass().getResource("CSS/main.css").toExternalForm());
+
+        // Get the current stage
+        Stage stage = (Stage) showinfo.getScene().getWindow();
+
+        // Set the new scene on the stage
+        stage.setScene(scene);
+
+        // Make the stage full screen
+//            stage.setFullScreen(true);
+//            stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

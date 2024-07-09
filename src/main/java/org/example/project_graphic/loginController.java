@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -27,7 +28,7 @@ public class loginController{
     @FXML
     Button loginbtn;
     @FXML
-    Text textbar;
+    Label label;
     @FXML
     Button showinfo;
     @FXML
@@ -62,10 +63,13 @@ public class loginController{
                 {
                     User.logged = i;
                     User.users.get(i).login = true;
-                    textbar.setText("Logged in successfully!");
+                    label.setText("Logged in successfully!");
+                    label.setStyle("-fx-text-fill: green");
                 }
                 else{
-                    textbar.setText("Password is incorrect");
+                    label.setText("Password is incorrect");
+                    label.setStyle("-fx-text-fill: red");
+                    return;
                 }
             }
         }
@@ -91,6 +95,10 @@ public class loginController{
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+        else{
+            label.setText("Username is incorrect");
+            label.setStyle("-fx-text-fill: red");
         }
     }
 
