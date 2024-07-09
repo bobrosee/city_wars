@@ -77,4 +77,27 @@ public class HelloController {
             e.printStackTrace();
         }
     }
+    @FXML
+    public void setSignup() {
+        try {
+            // Load the new scene
+            Parent root = FXMLLoader.load(getClass().getResource("signupView.fxml"));
+
+            // Create a new scene with the loaded parent
+            Scene scene = new Scene(root);
+//                scene.getStylesheets().add(getClass().getResource("CSS/main.css").toExternalForm());
+
+            // Get the current stage
+            Stage stage = (Stage) login.getScene().getWindow();
+
+            // Set the new scene on the stage
+            stage.setScene(scene);
+
+            // Make the stage full screen
+//            stage.setFullScreen(true);
+//            stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
