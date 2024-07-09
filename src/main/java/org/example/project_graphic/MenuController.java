@@ -94,6 +94,10 @@ public class MenuController implements Initializable {
             e.printStackTrace();
         }
     }
+    @FXML
+    public void setHistory() {
+
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

@@ -25,6 +25,7 @@ import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 import java.util.regex.Matcher;
+import java.util.stream.Collectors;
 
 public class SignupController{
     static Connection connection;
@@ -271,6 +272,18 @@ public class SignupController{
 //        User.users.add(newUser);
     }
 
+
+
+    public static List<Integer> starterPack() {
+        Random random = new Random();
+
+        // Generate a list of 20 unique random numbers between 1 and 35
+        return random.ints(1, 36)  // Generates an infinite stream of random ints between 1 (inclusive) and 36 (exclusive)
+                .distinct()   // Ensure all numbers are unique
+                .limit(20)    // Limit to 20 numbers
+                .boxed()      // Box ints to Integer
+                .collect(Collectors.toList());
+    }
 
 
 

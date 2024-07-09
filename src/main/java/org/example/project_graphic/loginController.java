@@ -15,9 +15,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import static org.example.project_graphic.HelloApplication.connection;
+
 public class loginController{
+    static String q, answer;
     @FXML
     TextField username;
     @FXML
@@ -30,6 +36,9 @@ public class loginController{
     Text textbar;
     @FXML
     Button showinfo;
+    @FXML
+    Button forgotPass;
+    static String theQ, theA, secA;
     @FXML
     public void setExit()throws IOException{
         try {
@@ -94,10 +103,39 @@ public class loginController{
         }
     }
 
-
-
-
-
-
-
+    @FXML
+    public void setRecovery() {
+        try {
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("passRecovery.fxml"));
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) exit.getScene().getWindow();
+                stage.setScene(scene);
+            }
+            catch (Exception e) {
+                System.out.println(e);
+            }
+            String inUsername = username.textProperty().getValue();
+            HelloApplication.Connect.connectToDatabase();
+            String sql = "SELECT * FROM users";
+            try{
+                PreparedStatement pstmt = connection.prepareStatement(sql);
+                ResultSet rs = pstmt.executeQuery();
+                while (rs.next()) {
+                    if (rs.getString("username").equals(inUsername)) {
+                        theQ = (rs.getString("sec_question"));
+                        theA = (rs.getString("password"));
+                        secA = (rs.getString("sec_answer"));
+                    }
+                }
+                pstmt.executeUpdate();
+            }
+            catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }
 }

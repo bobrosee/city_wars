@@ -14,6 +14,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -117,8 +118,19 @@ public class SecurityController {
                         TheQuestion = question;
                         TheAnswer = secAnswer;
                         SignupController.Connect.connectToDatabase();
-                        User newUser = new User(email, username, password, TheQuestion, TheAnswer, nickname, "", "", 1, 0, 1000);
-                        SignupController.Connect.insertUser(email, username, password, TheQuestion, TheAnswer, nickname, "userCardsList", 1, 1000, 0, "");
+                        List<Integer> userCards = SignupController.starterPack();
+                        String userCardsList = "";
+                        for (int i = 0; i < userCards.size(); i++) {
+                            if (i != userCards.size() - 1) {
+                                userCardsList += userCards.get(i) + "-";
+                            }
+                            else {
+                                userCardsList += userCards.get(i);
+
+                            }
+                        }
+                        User newUser = new User(email, username, password, TheQuestion, TheAnswer, nickname, userCardsList, "", 1, 0, 1000);
+                        SignupController.Connect.insertUser(email, username, password, TheQuestion, TheAnswer, nickname, userCardsList, 1, 1000, 0, "");
                         User.users.add(newUser);
                     }
                     else {
