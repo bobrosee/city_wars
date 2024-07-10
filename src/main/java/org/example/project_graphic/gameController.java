@@ -61,8 +61,8 @@ public class gameController implements Initializable {
     static int HostHp, GuestHp;
     static int HostDamage, GuestDamage;
     static ArrayList<Cards> HostFinalCards;
-    static ArrayList<Cards> GuestFinalCards = new ArrayList<Cards>();
-    static ArrayList<Cards> HostRoundCards = new ArrayList<Cards>();
+    static ArrayList<Cards> GuestFinalCards;
+    static ArrayList<Cards> HostRoundCards;
     static ArrayList<Cards> GuestRoundCards;
     static ArrayList<Cards> HostTimeline;
     static ArrayList<Cards> GuestTimeline;

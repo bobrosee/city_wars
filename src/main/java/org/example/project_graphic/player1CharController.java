@@ -21,7 +21,7 @@ import java.util.ResourceBundle;
 import static org.example.project_graphic.HelloApplication.Connect.connectToDatabase;
 import static org.example.project_graphic.HelloApplication.connection;
 import static org.example.project_graphic.HelloApplication.readUserTableCards;
-import static org.example.project_graphic.gameController.HostFinalCards;
+import static org.example.project_graphic.gameController.*;
 
 public class player1CharController implements Initializable {
 
@@ -58,6 +58,12 @@ public class player1CharController implements Initializable {
                 max.setImage(image);
                 image = new Image("file:G:/characters/laura.jpg");
                 laura.setImage(image);
+                HostFinalCards = new ArrayList<>();
+                GuestFinalCards = new ArrayList<>();
+                HostRoundCards = new ArrayList<>();
+                GuestRoundCards = new ArrayList<>();
+                HostTimeline = new ArrayList<>();
+                GuestTimeline = new ArrayList<>();
             }
         });
     }
@@ -92,13 +98,10 @@ public class player1CharController implements Initializable {
                     }
                 }
             }
-            User.users.get(User.logged).cards.clear();
-            for (Cards c : finalCards) {
-                User.users.get(User.logged).cards.add(c);
-            }
+
         }
     catch (Exception e) {
-            System.out.println(e);;
+            System.out.println(e);
         }
         connection.close();
         try {
@@ -152,10 +155,6 @@ public class player1CharController implements Initializable {
                         HostFinalCards.add(card);
                     }
                 }
-            }
-            User.users.get(User.logged).cards.clear();
-            for (Cards c : finalCards) {
-                User.users.get(User.logged).cards.add(c);
             }
         }
         catch (Exception e) {
@@ -214,10 +213,6 @@ public class player1CharController implements Initializable {
                     }
                 }
             }
-            User.users.get(User.logged).cards.clear();
-            for (Cards c : finalCards) {
-                User.users.get(User.logged).cards.add(c);
-            }
         }
         catch (Exception e) {
             System.out.println(e);;
@@ -274,10 +269,6 @@ public class player1CharController implements Initializable {
                         HostFinalCards.add(card);
                     }
                 }
-            }
-            User.users.get(User.logged).cards.clear();
-            for (Cards c : finalCards) {
-                User.users.get(User.logged).cards.add(c);
             }
         }
         catch (Exception e) {

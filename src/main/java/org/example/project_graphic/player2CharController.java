@@ -2,10 +2,15 @@ package org.example.project_graphic;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,8 +20,7 @@ import java.util.ResourceBundle;
 
 import static org.example.project_graphic.HelloApplication.Connect.connectToDatabase;
 import static org.example.project_graphic.HelloApplication.connection;
-import static org.example.project_graphic.gameController.GuestFinalCards;
-import static org.example.project_graphic.gameController.HostFinalCards;
+import static org.example.project_graphic.gameController.*;
 
 public class player2CharController implements Initializable {
     @FXML
@@ -79,15 +83,35 @@ public class player2CharController implements Initializable {
                     }
                 }
             }
-            User.users.get(User.Log2).cards.clear();
-            for (Cards c : finalCards) {
-                User.users.get(User.Log2).cards.add(c);
-            }
         }
         catch (Exception e) {
             System.out.println(e);;
         }
         connection.close();
+        HostHp = 100 +(User.users.get(User.logged).getLevel()-1)*20;
+        GuestHp = 100 +(User.users.get(User.Log2).getLevel()-1)*20;
+        HostDamage = 0;
+        GuestDamage = 0;
+        try {
+            // Load the new scene
+            Parent root = FXMLLoader.load(getClass().getResource("gameView.fxml"));
+
+            // Create a new scene with the loaded parent
+            Scene scene = new Scene(root);
+//                scene.getStylesheets().add(getClass().getResource("CSS/main.css").toExternalForm());
+
+            // Get the current stage
+            Stage stage = (Stage) uma.getScene().getWindow();
+
+            // Set the new scene on the stage
+            stage.setScene(scene);
+
+            // Make the stage full screen
+//            stage.setFullScreen(true);
+//            stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     public void setMax() throws SQLException {
@@ -120,15 +144,35 @@ public class player2CharController implements Initializable {
                     }
                 }
             }
-            User.users.get(User.Log2).cards.clear();
-            for (Cards c : finalCards) {
-                User.users.get(User.Log2).cards.add(c);
-            }
         }
         catch (Exception e) {
             System.out.println(e);;
         }
         connection.close();
+        HostHp = 100 +(User.users.get(User.logged).getLevel()-1)*20;
+        GuestHp = 100 +(User.users.get(User.Log2).getLevel()-1)*20;
+        HostDamage = 0;
+        GuestDamage = 0;
+        try {
+            // Load the new scene
+            Parent root = FXMLLoader.load(getClass().getResource("gameView.fxml"));
+
+            // Create a new scene with the loaded parent
+            Scene scene = new Scene(root);
+//                scene.getStylesheets().add(getClass().getResource("CSS/main.css").toExternalForm());
+
+            // Get the current stage
+            Stage stage = (Stage) uma.getScene().getWindow();
+
+            // Set the new scene on the stage
+            stage.setScene(scene);
+
+            // Make the stage full screen
+//            stage.setFullScreen(true);
+//            stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     public void setSteven() throws SQLException {
@@ -161,15 +205,35 @@ public class player2CharController implements Initializable {
                     }
                 }
             }
-            User.users.get(User.Log2).cards.clear();
-            for (Cards c : finalCards) {
-                User.users.get(User.Log2).cards.add(c);
-            }
         }
         catch (Exception e) {
             System.out.println(e);;
         }
         connection.close();
+        HostHp = 100 +(User.users.get(User.logged).getLevel()-1)*20;
+        GuestHp = 100 +(User.users.get(User.Log2).getLevel()-1)*20;
+        HostDamage = 0;
+        GuestDamage = 0;
+        try {
+            // Load the new scene
+            Parent root = FXMLLoader.load(getClass().getResource("gameView.fxml"));
+
+            // Create a new scene with the loaded parent
+            Scene scene = new Scene(root);
+//                scene.getStylesheets().add(getClass().getResource("CSS/main.css").toExternalForm());
+
+            // Get the current stage
+            Stage stage = (Stage) uma.getScene().getWindow();
+
+            // Set the new scene on the stage
+            stage.setScene(scene);
+
+            // Make the stage full screen
+//            stage.setFullScreen(true);
+//            stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     public void setUma() throws SQLException {
@@ -202,14 +266,34 @@ public class player2CharController implements Initializable {
                     }
                 }
             }
-            User.users.get(User.Log2).cards.clear();
-            for (Cards c : finalCards) {
-                User.users.get(User.Log2).cards.add(c);
-            }
         }
         catch (Exception e) {
             System.out.println(e);;
         }
         connection.close();
+        HostHp = 100 +(User.users.get(User.logged).getLevel()-1)*20;
+        GuestHp = 100 +(User.users.get(User.Log2).getLevel()-1)*20;
+        HostDamage = 0;
+        GuestDamage = 0;
+        try {
+            // Load the new scene
+            Parent root = FXMLLoader.load(getClass().getResource("gameView.fxml"));
+
+            // Create a new scene with the loaded parent
+            Scene scene = new Scene(root);
+//                scene.getStylesheets().add(getClass().getResource("CSS/main.css").toExternalForm());
+
+            // Get the current stage
+            Stage stage = (Stage) uma.getScene().getWindow();
+
+            // Set the new scene on the stage
+            stage.setScene(scene);
+
+            // Make the stage full screen
+//            stage.setFullScreen(true);
+//            stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
