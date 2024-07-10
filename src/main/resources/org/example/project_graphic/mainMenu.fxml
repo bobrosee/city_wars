@@ -63,7 +63,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 7;" text="Play" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#setPlay" prefHeight="28.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 7;" text="Play" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
       <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">

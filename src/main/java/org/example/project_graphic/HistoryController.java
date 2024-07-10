@@ -123,7 +123,7 @@ public class HistoryController implements Initializable {
                     opponentNames.add(loserName);
                     opponentLevel.add(Integer.toString(loserLevel));
                     results.add("Won");
-                } else {
+                } else if(loserName.equals(User.users.get(User.logged).getUsername())){
                     opponentNames.add(winnerName);
                     opponentLevel.add(Integer.toString(winnerLevel));
                     results.add("Lost");
