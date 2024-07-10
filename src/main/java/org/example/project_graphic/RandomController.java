@@ -1,5 +1,6 @@
 package org.example.project_graphic;
 
+
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -74,7 +75,7 @@ public class RandomController {
     }
     @FXML
     public void back() throws IOException {
-        Pane root = FXMLLoader.load(getClass().getResource("loginView.fxml"));
+        Pane root = FXMLLoader.load(getClass().getResource("signupView.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) nicknameField.getScene().getWindow();
         stage.setScene(scene);

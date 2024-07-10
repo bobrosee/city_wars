@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.project_graphic.HistoryController">
+    <VBox prefHeight="600.0" prefWidth="650.0" spacing="10.0">
+        <!-- Header Buttons -->
+        <Button fx:id="backB" onAction="#back" style="-fx-background-color: red; -fx-background-radius: 7;" text="Back">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+
+        <!-- Table View -->
+        <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="dateColumn" text="Date" />
+                <TableColumn fx:id="opponentNameColumn" prefWidth="116.79999542236328" text="Opponent's Name" />
+                <TableColumn fx:id="opponentLevelColumn" prefWidth="140.79998779296875" text="Opponent's Level" />
+                <TableColumn fx:id="resultColumn" prefWidth="132.0" text="Result" />
+                <TableColumn fx:id="prizeColumn" prefWidth="180.00003051757812" text="Prize" />
+            </columns>
+        </TableView>
+
+        <!-- Pagination Controls -->
+        <Pagination fx:id="pagination" prefHeight="98.0" prefWidth="650.0" VBox.vgrow="ALWAYS">
+        </Pagination>
+    </VBox>
+</AnchorPane>
