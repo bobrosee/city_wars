@@ -2,14 +2,19 @@ package org.example.project_graphic;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
@@ -207,9 +212,29 @@ public class gameController implements Initializable {
                 placeCards(n,i,GuestRoundCards,GuestTimeline,player,HostRoundCards,GuestTimeline,HostTimeline);
             }
         }
-        if(counterHost > roundHost && counterGuest > roundGuest)
+        if(counterHost >= roundHost && counterGuest >= roundGuest)
         {
-            //timeline
+            HostRoundCards.clear();
+            GuestRoundCards.clear();
+            try{
+                Parent root = FXMLLoader.load(getClass().getResource("timeLine.fxml"));
+
+                // Create a new scene with the loaded parent
+                Scene scene = new Scene(root);
+//                scene.getStylesheets().add(getClass().getResource("CSS/main.css").toExternalForm());
+
+                // Get the current stage
+                Stage stage = (Stage) message.getScene().getWindow();
+
+                // Set the new scene on the stage
+                stage.setScene(scene);
+
+                // Make the stage full screen
+//            stage.setFullScreen(true);
+//            stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         String t1 = "";
         for (int i = 0; i < HostTimeline.size(); i++) {

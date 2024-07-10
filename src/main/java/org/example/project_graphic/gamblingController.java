@@ -18,9 +18,10 @@ public class gamblingController {
     Button confirm;
     @FXML
     Label message;
+    static int coin;
     @FXML
     public void setConfirm(){
-        int coin = Integer.parseInt(coins.textProperty().get());
+        coin = Integer.parseInt(coins.textProperty().get());
         if(User.users.get(User.logged).coins > coin && User.users.get(User.Log2).coins > coin)
         {
             try {
