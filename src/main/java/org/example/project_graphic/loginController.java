@@ -74,6 +74,7 @@ public class loginController{
                     }
                     else {
                         message.textProperty().setValue("Password is incorrect");
+                        return;
                     }
                 }
             }
@@ -100,6 +101,9 @@ public class loginController{
                 } catch (Exception e) {
                     System.out.println(e);
                 }
+            }
+            else{
+                message.textProperty().setValue("Username is incorrect");
             }
         }
         catch (Exception e) {
