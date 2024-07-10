@@ -3719,7 +3719,7 @@ public class storeController implements Initializable {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                Image image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/chemicalChaos2.png");
+                Image image = new Image("file:G:/cards/chemicalChaos2.png");
                 Boolean flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3732,10 +3732,10 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/chemicalChaos1.png");
+                    image = new Image("file:G:/cards/chemicalChaos1.png");
                     chemicalChaos.setImage(image);
                 }
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/electroBlast2.png");
+                image = new Image("file:G:/cards/electroBlast2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3748,11 +3748,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/electroBlast1.png");
+                    image = new Image("file:G:/cards/electroBlast1.png");
                     electroBlast.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/stealthSupport2.png");
+                image = new Image("file:G:/cards/stealthSupport2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3765,11 +3765,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/stealthSupport1.png");
+                    image = new Image("file:G:/cards/stealthSupport1.png");
                     stealthSupport.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/ionBlast2.png");
+                image = new Image("file:G:/cards/ionBlast2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3782,11 +3782,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/ionBlast1.png");
+                    image = new Image("file:G:/cards/ionBlast1.png");
                     ionBlast.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/thermoExtinguisher2.png");
+                image = new Image("file:G:/cards/thermoExtinguisher2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3799,11 +3799,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/thermoExtinguisher1.png");
+                    image = new Image("file:G:/cards/thermoExtinguisher1.png");
                     thermoExtinguisher.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/mercilessContagion2.png");
+                image = new Image("file:G:/cards/mercilessContagion2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3816,11 +3816,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/mercilessContagion1.png");
+                    image = new Image("file:G:/cards/mercilessContagion1.png");
                     mercilessConatgion.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/condenserFire2.png");
+                image = new Image("file:G:/cards/condenserFire2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3833,11 +3833,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/condenserFire1.png");
+                    image = new Image("file:G:/cards/condenserFire1.png");
                     condenserFire.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/vapourShockwave2.png");
+                image = new Image("file:G:/cards/vapourShockwave2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3850,11 +3850,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/vapourShockwave1.png");
+                    image = new Image("file:G:/cards/vapourShockwave1.png");
                     vapourShockwave.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/shockImpairment2.png");
+                image = new Image("file:G:/cards/shockImpairment2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3867,11 +3867,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/shockImpairment1.png");
+                    image = new Image("file:G:/cards/shockImpairment1.png");
                     shockImpairment.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/fromTheHip2.png");
+                image = new Image("file:G:/cards/fromTheHip2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3884,11 +3884,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/fromTheHip1.png");
+                    image = new Image("file:G:/cards/fromTheHip1.png");
                     fromTheHip.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/sprayAndPray2.png");
+                image = new Image("file:G:/cards/sprayAndPray2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3901,11 +3901,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/sprayAndPray1.png");
+                    image = new Image("file:G:/cards/sprayAndPray1.png");
                     sprayAndPray.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/powerBeam2.png");
+                image = new Image("file:G:/cards/powerBeam2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3918,11 +3918,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/powerBeam1.png");
+                    image = new Image("file:G:/cards/powerBeam1.png");
                     powerBeam.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/crouchingBlast2.png");
+                image = new Image("file:G:/cards/crouchingBlast2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3935,11 +3935,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/crouchingBlast1.png");
+                    image = new Image("file:G:/cards/crouchingBlast1.png");
                     crouchingBlast.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/gadgetBacklash2.png");
+                image = new Image("file:G:/cards/gadgetBacklash2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3952,11 +3952,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/gadgetBacklash1.png");
+                    image = new Image("file:G:/cards/gadgetBacklash1.png");
                     gadgetBacklash.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/fallingVenom2.png");
+                image = new Image("file:G:/cards/fallingVenom2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3969,11 +3969,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/fallingVenom1.png");
+                    image = new Image("file:G:/cards/fallingVenom1.png");
                     fallingVenom.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/poisonDispersal2.png");
+                image = new Image("file:G:/cards/poisonDispersal2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -3986,11 +3986,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/poisonDispersal1.png");
+                    image = new Image("file:G:/cards/poisonDispersal1.png");
                     poisonDispersal.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/acidicCleanser2.png");
+                image = new Image("file:G:/cards/acidicCleanser2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4003,11 +4003,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/acidicCleanser1.png");
+                    image = new Image("file:G:/cards/acidicCleanser1.png");
                     acidicCleanser.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/shatteredWrath2.png");
+                image = new Image("file:G:/cards/shatteredWrath2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4020,11 +4020,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/shatteredWrath1.png");
+                    image = new Image("file:G:/cards/shatteredWrath1.png");
                     ShatteredWrath.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/shatteredAugmentation2.png");
+                image = new Image("file:G:/cards/shatteredAugmentation2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4037,11 +4037,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/shatteredAugmentation1.png");
+                    image = new Image("file:G:/cards/shatteredAugmentation1.png");
                     ShatteredAugmentation.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/shockAndAwe2.png");
+                image = new Image("file:G:/cards/shockAndAwe2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4054,11 +4054,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/shockAndAwe1.png");
+                    image = new Image("file:G:/cards/shockAndAwe1.png");
                     ShockAndAwe.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/bubbleBlast2.png");
+                image = new Image("file:G:/cards/bubbleBlast2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4071,11 +4071,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/bubbleBlast1.png");
+                    image = new Image("file:G:/cards/bubbleBlast1.png");
                     bubbleBlast.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/flashPellets2.png");
+                image = new Image("file:G:/cards/flashPellets2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4088,11 +4088,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/flashPellets1.png");
+                    image = new Image("file:G:/cards/flashPellets1.png");
                     flashPellets.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/bulletFlurry2.png");
+                image = new Image("file:G:/cards/bulletFlurry2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4105,11 +4105,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/bulletFlurry1.png");
+                    image = new Image("file:G:/cards/bulletFlurry1.png");
                     bulletFlurry.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/acidEvaporation2.png");
+                image = new Image("file:G:/cards/acidEvaporation2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4122,11 +4122,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/acidEvaporation1.png");
+                    image = new Image("file:G:/cards/acidEvaporation1.png");
                     acidEvaporation.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/medBotShield2.png");
+                image = new Image("file:G:/cards/medBotShield2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4139,11 +4139,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/medBotShield1.png");
+                    image = new Image("file:G:/cards/medBotShield1.png");
                     medBotShield.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/cryoMeltdown2.png");
+                image = new Image("file:G:/cards/cryoMeltdown2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4156,11 +4156,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/cryoMeltdown1.png");
+                    image = new Image("file:G:/cards/cryoMeltdown1.png");
                     cryoMeltdown.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/reinforcedBlitz2.png");
+                image = new Image("file:G:/cards/reinforcedBlitz2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4173,11 +4173,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/reinforcedBlitz1.png");
+                    image = new Image("file:G:/cards/reinforcedBlitz1.png");
                     reinforcedBlitz.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/shockAttack2.png");
+                image = new Image("file:G:/cards/shockAttack2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4190,11 +4190,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/shockAttack1.png");
+                    image = new Image("file:G:/cards/shockAttack1.png");
                     ShockAttack.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/gapAbsorber2.png");
+                image = new Image("file:G:/cards/gapAbsorber2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4207,11 +4207,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/gapAbsorber1.png");
+                    image = new Image("file:G:/cards/gapAbsorber1.png");
                     gapAbsorber.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/sonarStrike2.png");
+                image = new Image("file:G:/cards/sonarStrike2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4224,11 +4224,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/sonarStrike1.png");
+                    image = new Image("file:G:/cards/sonarStrike1.png");
                     sonarStrike.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/cryoDisintegration2.png");
+                image = new Image("file:G:/cards/cryoDisintegration2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4241,11 +4241,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/cryoDisintegration1.png");
+                    image = new Image("file:G:/cards/cryoDisintegration1.png");
                     cryoDisintegration.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/gadgetBackup2.png");
+                image = new Image("file:G:/cards/gadgetBackup2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4258,11 +4258,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/gadgetBackup1.png");
+                    image = new Image("file:G:/cards/gadgetBackup1.png");
                     gadgetBackup.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/shockDissolver2.png");
+                image = new Image("file:G:/cards/shockDissolver2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4275,11 +4275,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/shockDissolver1.png");
+                    image = new Image("file:G:/cards/shockDissolver1.png");
                     shockDissolver.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/bikeSupport2.png");
+                image = new Image("file:G:/cards/bikeSupport2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4292,11 +4292,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/bikeSupport1.png");
+                    image = new Image("file:G:/cards/bikeSupport1.png");
                     bikeSupport.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/sniperSupport2.png");
+                image = new Image("file:G:/cards/sniperSupport2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4309,11 +4309,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/sniperSupport1.png");
+                    image = new Image("file:G:/cards/sniperSupport1.png");
                     sniperSupport.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/chrisCross2.png");
+                image = new Image("file:G:/cards/chrisCross2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4326,11 +4326,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/chrisCross1.png");
+                    image = new Image("file:G:/cards/chrisCross1.png");
                     chrisCross.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/bodySnatcher2.png");
+                image = new Image("file:G:/cards/bodySnatcher2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4343,11 +4343,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/bodySnatcher1.png");
+                    image = new Image("file:G:/cards/bodySnatcher1.png");
                     bodySnatcher.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/helenHealer2.png");
+                image = new Image("file:G:/cards/helenHealer2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4360,11 +4360,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/helenHealer1.png");
+                    image = new Image("file:G:/cards/helenHealer1.png");
                     helenHealer.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/Arnold2.png");
+                image = new Image("file:G:/cards/Arnold2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4377,11 +4377,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/Arnold1.png");
+                    image = new Image("file:G:/cards/Arnold1.png");
                     Arnold.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/Kopy2.png");
+                image = new Image("file:G:/cards/Kopy2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4394,11 +4394,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/Kopy1.png");
+                    image = new Image("file:G:/cards/Kopy1.png");
                     Kopy.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/LesFerdinand2.png");
+                image = new Image("file:G:/cards/LesFerdinand2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4411,11 +4411,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/LesFerdinand1.png");
+                    image = new Image("file:G:/cards/LesFerdinand1.png");
                     LesFerdinand.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/fracturedButWhole2.png");
+                image = new Image("file:G:/cards/fracturedButWhole2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4428,11 +4428,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/fracturedButWhole1.png");
+                    image = new Image("file:G:/cards/fracturedButWhole1.png");
                     fracturedButWhole.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/Suii2.png");
+                image = new Image("file:G:/cards/Suii2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4445,11 +4445,11 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/Suii1.png");
+                    image = new Image("file:G:/cards/Suii1.png");
                     Suii.setImage(image);
                 }
                 /////////////////////
-                image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/Belasphemous2.png");
+                image = new Image("file:G:/cards/Belasphemous2.png");
                 flag = false;
                 for(Cards card : User.users.get(User.logged).cards)
                 {
@@ -4462,7 +4462,7 @@ public class storeController implements Initializable {
                 }
                 if(!flag)
                 {
-                    image = new Image("file:C:/Users/moalna/IdeaProjects/Phase2/city_wars/cards/Belasphemous1.png");
+                    image = new Image("file:G:/cards/Belasphemous1.png");
                     Belasphemous.setImage(image);
                 }
 

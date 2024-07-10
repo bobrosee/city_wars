@@ -26,6 +26,8 @@ public class MenuController implements Initializable {
     @FXML
     Text coins,xp,hp;
     @FXML
+    Text welcome;
+    @FXML
     public void setShowinfo(){
         try {
             Parent root = FXMLLoader.load(getClass().getResource("info.fxml"));
@@ -116,6 +118,11 @@ public class MenuController implements Initializable {
                 hp.setText("hp: " + (100 + 20 *(User.users.get(User.logged).getLevel()-1)));
                 xp.setText("xp: " + Integer.toString(User.users.get(User.logged).getXp()));
                 coins.setText("coins: " + Integer.toString(User.users.get(User.logged).coins));
+                if(SecurityController.welcome)
+                {
+                    welcome.setText("Welcome! You have been gifted 20 cards!");
+                    SecurityController.welcome = false;
+                }
             }
         });
     }

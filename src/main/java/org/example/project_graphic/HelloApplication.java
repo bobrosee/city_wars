@@ -592,6 +592,23 @@ public class HelloApplication extends Application {
                 connection.close();
             }
         }
+        public static void UpdateSecurityAnswer(String Username, String sec)throws SQLException
+        {
+            connectToDatabase();
+            String sql = "UPDATE users SET sec_answer = ? WHERE username = ?";
+            try{
+                PreparedStatement pstmt = connection.prepareStatement(sql);
+                pstmt.setString(1,sec);
+                pstmt.setString(2,Username);
+                pstmt.executeUpdate();
+            }
+            catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+            finally{
+                connection.close();
+            }
+        }
 
         public static void readUsers() throws SQLException {
             connectToDatabase();

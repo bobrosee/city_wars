@@ -126,6 +126,7 @@ public class changeController {
             if(!sec.textProperty().isEmpty().get())
             {
                 User.users.get(User.logged).setSec_answer(sec.textProperty().get());
+                HelloApplication.Connect.UpdateSecurityAnswer(User.users.get(User.logged).getUsername(),User.users.get(User.logged).getSec_answer());
             }
             txt.setText("Changes were made successfully!");
             txt.setStyle("-fx-text-fill: green;");

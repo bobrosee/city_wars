@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
@@ -21,6 +22,7 @@ import java.util.Scanner;
 public class SecurityController {
     static int answer = 0;
     static boolean done = false;
+    static Boolean welcome = false;
     public static String asciiMath() {
         Random random = new Random();
         int a = random.nextInt(10) + 1;
@@ -132,6 +134,25 @@ public class SecurityController {
                         User newUser = new User(email, username, password, TheQuestion, TheAnswer, nickname, userCardsList, "", 1, 0, 1000);
                         SignupController.Connect.insertUser(email, username, password, TheQuestion, TheAnswer, nickname, userCardsList, 1, 1000, 0, "");
                         User.users.add(newUser);
+                        HelloApplication.readUserTableCards(User.users.size()-1);
+                        User.logged = User.users.size()-1;
+                        welcome = true;
+                        try {
+                            Parent root = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
+
+                            // Create a new scene with the loaded parent
+                            Scene scene = new Scene(root);
+//                scene.getStylesheets().add(getClass().getResource("CSS/main.css").toExternalForm());
+
+                            // Get the current stage
+                            Stage stage = (Stage) comboBox.getScene().getWindow();
+
+                            // Set the new scene on the stage
+                            stage.setScene(scene);
+                        }
+                        catch (Exception e) {
+                            System.out.println(e);
+                        }
                     }
                     else {
                         initialize();
