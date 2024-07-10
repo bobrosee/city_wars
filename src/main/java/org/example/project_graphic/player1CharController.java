@@ -12,7 +12,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import static org.example.project_graphic.HelloApplication.Connect.connectToDatabase;
+import static org.example.project_graphic.HelloApplication.connection;
+import static org.example.project_graphic.HelloApplication.readUserTableCards;
+import static org.example.project_graphic.gameController.HostFinalCards;
 
 public class player1CharController implements Initializable {
 
@@ -30,6 +39,14 @@ public class player1CharController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        HostFinalCards = new ArrayList<Cards>();
+        for (int i = 0; i < User.users.size(); i++) {
+            try {
+                readUserTableCards(i);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
@@ -45,8 +62,45 @@ public class player1CharController implements Initializable {
         });
     }
     @FXML
-    public void setLaura(){
+    public void setLaura() throws SQLException {
         gameController.character1 = 4;
+        ArrayList<Cards> finalCards = new ArrayList<Cards>();
+        connectToDatabase();
+        String sql = "SELECT * FROM LauraCards";
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                Cards card = new Cards(rs.getInt("number"),
+                        rs.getString("name"),
+                        rs.getInt("att_def"),
+                        rs.getInt("duration"),
+                        rs.getInt("damage"),
+                        rs.getInt("upgrade_level"),
+                        rs.getInt("upgrade_cost"),
+                        rs.getInt("price"),
+                        rs.getInt("colour")
+                );
+                for (Cards aCard : User.users.get(User.logged).cards) {
+                    if (aCard.name.equals(card.name)) {
+                        Cards cardd = new Cards(aCard.number, aCard.name, (int) (1.2 * aCard.att_def), aCard.duration, (int) (1.2 * aCard.damage), aCard.upgrade_level, aCard.upgrade_cost, aCard.price, aCard.colour);
+                        finalCards.add(cardd);
+                        HostFinalCards.add(cardd);
+                    } else {
+                        finalCards.add(card);
+                        HostFinalCards.add(card);
+                    }
+                }
+            }
+            User.users.get(User.logged).cards.clear();
+            for (Cards c : finalCards) {
+                User.users.get(User.logged).cards.add(c);
+            }
+        }
+    catch (Exception e) {
+            System.out.println(e);;
+        }
+        connection.close();
         try {
             // Load the new scene
             Parent root = FXMLLoader.load(getClass().getResource("secondPlayerCharacter.fxml"));
@@ -69,8 +123,45 @@ public class player1CharController implements Initializable {
         }
     }
     @FXML
-    public void setMax(){
+    public void setMax() throws SQLException {
         gameController.character1 = 3;
+        ArrayList<Cards> finalCards = new ArrayList<Cards>();
+        connectToDatabase();
+        String sql = "SELECT * FROM MaxCards";
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                Cards card = new Cards(rs.getInt("number"),
+                        rs.getString("name"),
+                        rs.getInt("att_def"),
+                        rs.getInt("duration"),
+                        rs.getInt("damage"),
+                        rs.getInt("upgrade_level"),
+                        rs.getInt("upgrade_cost"),
+                        rs.getInt("price"),
+                        rs.getInt("colour")
+                );
+                for (Cards aCard : User.users.get(User.logged).cards) {
+                    if (aCard.name.equals(card.name)) {
+                        Cards cardd = new Cards(aCard.number, aCard.name, (int) (1.2 * aCard.att_def), aCard.duration, (int) (1.2 * aCard.damage), aCard.upgrade_level, aCard.upgrade_cost, aCard.price, aCard.colour);
+                        finalCards.add(cardd);
+                        HostFinalCards.add(cardd);
+                    } else {
+                        finalCards.add(card);
+                        HostFinalCards.add(card);
+                    }
+                }
+            }
+            User.users.get(User.logged).cards.clear();
+            for (Cards c : finalCards) {
+                User.users.get(User.logged).cards.add(c);
+            }
+        }
+        catch (Exception e) {
+            System.out.println(e);;
+        }
+        connection.close();
         try {
             // Load the new scene
             Parent root = FXMLLoader.load(getClass().getResource("secondPlayerCharacter.fxml"));
@@ -93,8 +184,45 @@ public class player1CharController implements Initializable {
         }
     }
     @FXML
-    public void setSteven(){
+    public void setSteven() throws SQLException {
         gameController.character1 = 1;
+        ArrayList<Cards> finalCards = new ArrayList<Cards>();
+        connectToDatabase();
+        String sql = "SELECT * FROM StevenCards";
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                Cards card = new Cards(rs.getInt("number"),
+                        rs.getString("name"),
+                        rs.getInt("att_def"),
+                        rs.getInt("duration"),
+                        rs.getInt("damage"),
+                        rs.getInt("upgrade_level"),
+                        rs.getInt("upgrade_cost"),
+                        rs.getInt("price"),
+                        rs.getInt("colour")
+                );
+                for (Cards aCard : User.users.get(User.logged).cards) {
+                    if (aCard.name.equals(card.name)) {
+                        Cards cardd = new Cards(aCard.number, aCard.name, (int) (1.2 * aCard.att_def), aCard.duration, (int) (1.2 * aCard.damage), aCard.upgrade_level, aCard.upgrade_cost, aCard.price, aCard.colour);
+                        finalCards.add(cardd);
+                        HostFinalCards.add(cardd);
+                    } else {
+                        finalCards.add(card);
+                        HostFinalCards.add(card);
+                    }
+                }
+            }
+            User.users.get(User.logged).cards.clear();
+            for (Cards c : finalCards) {
+                User.users.get(User.logged).cards.add(c);
+            }
+        }
+        catch (Exception e) {
+            System.out.println(e);;
+        }
+        connection.close();
         try {
             // Load the new scene
             Parent root = FXMLLoader.load(getClass().getResource("secondPlayerCharacter.fxml"));
@@ -117,8 +245,45 @@ public class player1CharController implements Initializable {
         }
     }
     @FXML
-    public void setUma(){
+    public void setUma() throws SQLException {
         gameController.character1 = 2;
+        ArrayList<Cards> finalCards = new ArrayList<Cards>();
+        connectToDatabase();
+        String sql = "SELECT * FROM UmaCards";
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                Cards card = new Cards(rs.getInt("number"),
+                        rs.getString("name"),
+                        rs.getInt("att_def"),
+                        rs.getInt("duration"),
+                        rs.getInt("damage"),
+                        rs.getInt("upgrade_level"),
+                        rs.getInt("upgrade_cost"),
+                        rs.getInt("price"),
+                        rs.getInt("colour")
+                );
+                for (Cards aCard : User.users.get(User.logged).cards) {
+                    if (aCard.name.equals(card.name)) {
+                        Cards cardd = new Cards(aCard.number, aCard.name, (int) (1.2 * aCard.att_def), aCard.duration, (int) (1.2 * aCard.damage), aCard.upgrade_level, aCard.upgrade_cost, aCard.price, aCard.colour);
+                        finalCards.add(cardd);
+                        HostFinalCards.add(cardd);
+                    } else {
+                        finalCards.add(card);
+                        HostFinalCards.add(card);
+                    }
+                }
+            }
+            User.users.get(User.logged).cards.clear();
+            for (Cards c : finalCards) {
+                User.users.get(User.logged).cards.add(c);
+            }
+        }
+        catch (Exception e) {
+            System.out.println(e);;
+        }
+        connection.close();
         try {
             // Load the new scene
             Parent root = FXMLLoader.load(getClass().getResource("secondPlayerCharacter.fxml"));
