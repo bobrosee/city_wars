@@ -88,7 +88,7 @@ public class gameController implements Initializable {
                 GuestRoundCards.add(GuestFinalCards.get(2));
                 GuestRoundCards.add(GuestFinalCards.get(3));
                 GuestRoundCards.add(GuestFinalCards.get(4));
-                for (int i = 0; i < 20; i++) {
+                for (int i = 0; i < 19; i++) {
                     Cards khali = new Cards(99,"null",0,1,0,0,0,0,0);
                     HostTimeline.add(khali);
                     Cards khali1 = new Cards(99,"null",0,1,0,0,0,0,0);
@@ -97,10 +97,10 @@ public class gameController implements Initializable {
                 Random rand = new Random();
                 int random;
                 Cards hole = new Cards(99,"Hole",0,1,0,0,0,0,0);
-                random = rand.nextInt(21);
+                random = rand.nextInt(20);
                 HostTimeline.add(random,hole);
                 Cards hole1 = new Cards(99,"Hole",0,1,0,0,0,0,0);
-                random = rand.nextInt(21);
+                random = rand.nextInt(20);
                 GuestTimeline.add(random,hole1);
                 counterGuest = 1;
                 counterHost = 1;
@@ -178,7 +178,7 @@ public class gameController implements Initializable {
     @FXML
     public void setApply(){
         String string = input.textProperty().get();
-        if(string.matches("-Select card number \\d player \\d"))
+        if(string.matches("-Select card number \\d+ player \\d+"))
         {
             String[] inputs = string.split(" ");
             if(inputs[5].equals("1"))
@@ -195,7 +195,7 @@ public class gameController implements Initializable {
                 message.setStyle("-fx-text-fill: green");
             }
         }
-        if(string.matches("-Placing card number \\d in block \\d player \\d"))
+        if(string.matches("-Placing card number \\d in block \\d+ player \\d"))
         {
             String[] inputs = string.split(" ");
             if(inputs[8].equals("1"))
@@ -203,13 +203,27 @@ public class gameController implements Initializable {
                 player = true;
                 int n = Integer.parseInt(inputs[3]) - 1;
                 int i = Integer.parseInt(inputs[6]) - 1;
+                int a = HostRoundCards.size();
                 placeCards(n,i,HostRoundCards,HostTimeline,player,GuestRoundCards,HostTimeline,GuestTimeline);
+                int b = HostRoundCards.size();
+                if(a > b)
+                {
+                    Collections.shuffle(HostFinalCards);
+                    HostRoundCards.add(HostFinalCards.get(0));
+                }
             }
             else{
                 player = false;
                 int n = Integer.parseInt(inputs[3]) - 1;
                 int i = Integer.parseInt(inputs[6]) - 1;
+                int a = GuestRoundCards.size();
                 placeCards(n,i,GuestRoundCards,GuestTimeline,player,HostRoundCards,GuestTimeline,HostTimeline);
+                int b = GuestRoundCards.size();
+                if(a > b)
+                {
+                    Collections.shuffle(GuestFinalCards);
+                    GuestRoundCards.add(GuestFinalCards.get(0));
+                }
             }
         }
         if(counterHost >= roundHost && counterGuest >= roundGuest)
@@ -247,10 +261,6 @@ public class gameController implements Initializable {
             t2 += GuestTimeline.get(i).name + " ";
         }
         time2.setText(t2);
-        Collections.shuffle(HostFinalCards);
-        HostRoundCards.add(HostFinalCards.get(0));
-        Collections.shuffle(GuestFinalCards);
-        GuestRoundCards.add(GuestFinalCards.get(0));
         t1 = "";
         for (int i = 0; i < HostRoundCards.size(); i++) {
             t1 += HostRoundCards.get(i).name + " ";
@@ -286,10 +296,9 @@ public class gameController implements Initializable {
             Random rand = new Random();
             int a = rand.nextInt(enemyCards.size());
             enemyCards.get(a).damage = (int)(0.8 * enemyCards.get(a).damage);
-            System.out.println(enemyCards.get(a).name + "'s damage was reduced to 80%");
-            int b = rand.nextInt(enemyCards.size());
-            enemyCards.get(b).att_def = (int)(0.8 * enemyCards.get(b).att_def);
-            System.out.println(enemyCards.get(b).name + "'s att_def was reduced to 80%");
+            enemyCards.get(a).att_def = (int)(0.8 * enemyCards.get(a).att_def);
+
+            message.setText(enemyCards.get(a).name + "'s damage & att_def was reduced to 80%");
             if(player)
             {
                 playerCards.remove(n);

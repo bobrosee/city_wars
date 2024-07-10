@@ -45,8 +45,8 @@
         </rowConstraints>
          <children>
             <Text fx:id="loser" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Loser has won 50 xp" GridPane.halignment="CENTER" />
-            <Text fx:id="upwinner" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="1" />
-            <Text fx:id="uploser" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
+            <Text fx:id="upwinner" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+            <Text fx:id="uploser" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <GridPane GridPane.columnIndex="1">
