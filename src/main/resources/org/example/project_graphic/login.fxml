@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.project_graphic.loginController">
+<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.project_graphic.loginController">
     <ImageView fx:id="backgroundImage" fitHeight="600" fitWidth="800.0" pickOnBounds="true" preserveRatio="true" />
 
     <Text fx:id="message" layoutX="300" layoutY="50" styleClass="title-text" textAlignment="CENTER" />
@@ -19,6 +19,7 @@
 
     <Button fx:id="exit" layoutX="100.0" layoutY="368.0" minHeight="50" minWidth="100" onAction="#setExit" styleClass="button" text="Back" />
     <Button fx:id="loginbtn" layoutX="600.0" layoutY="361.0" minHeight="50" minWidth="100" onAction="#setLoginbtn" styleClass="button" text="Login" />
+   <ImageView fx:id="countdown" fitHeight="112.0" fitWidth="167.0" layoutX="317.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
 
     <stylesheets>
         <URL value="@loginMenu.css" />

@@ -1,5 +1,7 @@
 package org.example.project_graphic;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -10,8 +12,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
@@ -39,6 +44,8 @@ public class loginController{
     @FXML
     Button forgotPass;
     static String theQ, theA, secA;
+    int count;
+    Timeline timeline;
     @FXML
     public void setExit()throws IOException{
         try {
@@ -74,7 +81,16 @@ public class loginController{
                     else {
                         String str = null;
                         int n = 1;
-                        message.textProperty().setValue("Password and Username don't match!,Try again in 5 seconds");
+                        count = 5;
+                        timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
+                            message.textProperty().setValue("Wrong pass!,Try again in " + String.valueOf(count) + " seconds");
+                            count--;
+                            if(count<0)
+                                timeline.stop();
+                        }));
+                        timeline.setCycleCount(6);
+                        timeline.play();
+                        return;
 //                        long time0 = System.currentTimeMillis()/1000;
 //                        boolean sit = false;
 //                        while(!sit)
