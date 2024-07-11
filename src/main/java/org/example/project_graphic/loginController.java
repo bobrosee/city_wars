@@ -72,8 +72,30 @@ public class loginController{
                         User.users.get(i).login = true;
                     }
                     else {
-                        message.textProperty().setValue("Password is incorrect");
-                        return;
+                        String str = null;
+                        int n = 1;
+                        message.textProperty().setValue("Password and Username don't match!,Try again in 5 seconds");
+//                        long time0 = System.currentTimeMillis()/1000;
+//                        boolean sit = false;
+//                        while(!sit)
+//                        {
+//                            long time1 = System.currentTimeMillis()/1000;
+//                            str = password.textProperty().get();
+//                            if((time1-time0)<n* 5L)
+//                            {
+//                                message.textProperty().setValue("Try again in " + (n* 5L - (time1-time0)) + " seconds");
+//                            }
+//                            else if(str.equals(User.users.get(i).getPassword()))
+//                            {
+//                                User.users.get(i).login = true;
+//                                User.logged = i;
+//                                sit = true;
+//                            }
+//                            else{
+//                                n++;
+//                                message.textProperty().setValue("Password and Username don't match!\n try again in "+ n*5 +" seconds");
+//                            }
+//                        }
                     }
                 }
             }

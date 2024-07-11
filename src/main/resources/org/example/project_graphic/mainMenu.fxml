@@ -16,7 +16,7 @@
     <Button fx:id="playButton" layoutX="300" layoutY="100" minHeight="50" minWidth="200" onAction="#setPlay" styleClass="button" text="Play" />
     <Button fx:id="showinfo" layoutX="300" layoutY="160" minHeight="50" minWidth="200" onAction="#setShowinfo" styleClass="button" text="User Info" />
     <Button fx:id="history" layoutX="300" layoutY="220" minHeight="50" minWidth="200" onAction="#setHistory" styleClass="button" text="Game History" />
-    <Button fx:id="change" layoutX="300" layoutY="280" minHeight="50" minWidth="200" onAction="#setChange" styleClass="button" text="Profile Info" />
+    <Button fx:id="change" layoutX="300" layoutY="280" minHeight="50" minWidth="200" onAction="#setChange" styleClass="button" text="Change Profile Info" />
     <Button fx:id="storeButton" layoutX="300" layoutY="340" minHeight="50" minWidth="200" onAction="#setStore" styleClass="button" text="Store" />
     <Button fx:id="exitButton" layoutX="300" layoutY="400" minHeight="50" minWidth="200" onAction="#setExit" styleClass="button" text="Exit" />
 
