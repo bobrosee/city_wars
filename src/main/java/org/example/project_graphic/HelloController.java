@@ -81,7 +81,7 @@ public class HelloController {
     public void setSignup(){
         try {
             // Load the new scene
-            Parent root = FXMLLoader.load(getClass().getResource("loginView.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("signupView.fxml"));
 
             // Create a new scene with the loaded parent
             Scene scene = new Scene(root);

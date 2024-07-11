@@ -1,115 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #334FFF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.project_graphic.MenuController">
-  <columnConstraints>
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-  </columnConstraints>
-  <rowConstraints>
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-  </rowConstraints>
-   <children>
-      <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="83.4000244140625" minWidth="10.0" prefWidth="59.7999755859375" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.40003662109375" minWidth="10.0" prefWidth="78.2000244140625" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.0" minWidth="10.0" prefWidth="63.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Button fx:id="showinfo" mnemonicParsing="false" onAction="#setShowinfo" prefHeight="26.0" prefWidth="77.0" style="-fx-background-radius: 7;" text="Show info" GridPane.columnIndex="1" />
-            <Button fx:id="history" mnemonicParsing="false" onAction="#setHistory" prefHeight="26.0" prefWidth="77.0" style="-fx-background-radius: 7;" text="history" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-         </children>
-      </GridPane>
-      <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="10.0" prefWidth="54.799963378906256" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.60003662109375" minWidth="10.0" prefWidth="119.60003662109375" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="84.19995117187501" minWidth="10.0" prefWidth="27.19999999999999" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Button fx:id="change" mnemonicParsing="false" onAction="#setChange" style="-fx-background-radius: 7;" text="change profile" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-         </children>
-      </GridPane>
-      <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="83.4000244140625" minWidth="10.0" prefWidth="48.8000244140625" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.79997558593749" minWidth="10.0" prefWidth="100.79997558593749" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="62.20001220703125" minWidth="10.0" prefWidth="55.800048828125" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Button mnemonicParsing="false" onAction="#setPlay" prefHeight="28.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 7;" text="Play" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-         </children>
-      </GridPane>
-      <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="81.20001220703125" minWidth="10.0" prefWidth="78.4000244140625" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="62.20001220703125" minWidth="10.0" prefWidth="50.39997558593751" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="84.20001220703125" minWidth="10.0" prefWidth="75.4000244140625" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="21.599951171875" minHeight="10.0" prefHeight="11.199987792968749" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="41.60001220703124" minHeight="10.0" prefHeight="41.60001220703124" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Button mnemonicParsing="false" onAction="#setStore" prefHeight="26.0" prefWidth="52.0" style="-fx-background-radius: 7;" text="Store" GridPane.columnIndex="1" />
-            <Button fx:id="exit" mnemonicParsing="false" onAction="#setExit" prefHeight="26.0" prefWidth="48.0" style="-fx-background-radius: 7;" text="Exit" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-         </children>
-      </GridPane>
-      <GridPane GridPane.rowIndex="1">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Text fx:id="coins" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="1" fx:id="xp" />
-            <Text fx:id="hp" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-         </children>
-      </GridPane>
-      <GridPane GridPane.columnIndex="1">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Text fx:id="welcome" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
-         </children>
-      </GridPane>
-   </children>
-</GridPane>
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.project_graphic.MenuController">
+    <ImageView fx:id="backgroundImage" fitHeight="600" fitWidth="800" pickOnBounds="true" preserveRatio="true" />
+
+    <Text fx:id="titleText" layoutX="300" layoutY="50" styleClass="title-text" />
+
+    <Button fx:id="playButton" layoutX="300" layoutY="100" minHeight="50" minWidth="200" onAction="#setPlay" styleClass="button" text="Play" />
+    <Button fx:id="showinfo" layoutX="300" layoutY="160" minHeight="50" minWidth="200" onAction="#setShowinfo" styleClass="button" text="User Info" />
+    <Button fx:id="history" layoutX="300" layoutY="220" minHeight="50" minWidth="200" onAction="#setHistory" styleClass="button" text="Game History" />
+    <Button fx:id="change" layoutX="300" layoutY="280" minHeight="50" minWidth="200" onAction="#setChange" styleClass="button" text="Profile Info" />
+    <Button fx:id="storeButton" layoutX="300" layoutY="340" minHeight="50" minWidth="200" onAction="#setStore" styleClass="button" text="Store" />
+    <Button fx:id="exitButton" layoutX="300" layoutY="400" minHeight="50" minWidth="200" onAction="#setExit" styleClass="button" text="Exit" />
+
+    <VBox fx:id="profileThumbnail" layoutX="50" layoutY="100" spacing="10" styleClass="profile-thumbnail">
+      <Text fx:id="coins" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" fx:id="xp">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="hp" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+    </VBox>
+
+    <stylesheets>
+        <URL value="@mainMenu.css" />
+    </stylesheets>
+</AnchorPane>

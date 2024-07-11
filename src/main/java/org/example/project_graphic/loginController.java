@@ -70,7 +70,6 @@ public class loginController{
                     if (User.users.get(i).getPassword().equals(password.textProperty().get())) {
                         User.logged = i;
                         User.users.get(i).login = true;
-                        message.textProperty().setValue("Logged in successfully!");
                     }
                     else {
                         message.textProperty().setValue("Password is incorrect");

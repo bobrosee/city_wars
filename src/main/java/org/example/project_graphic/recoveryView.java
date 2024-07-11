@@ -17,7 +17,7 @@ public class recoveryView {
     @FXML
     TextField answer;
     @FXML
-    Text question = new Text();
+    TextField question = new TextField();
     @FXML
     Text showPass;
     @FXML

@@ -76,7 +76,7 @@ public class HelloApplication extends Application {
             upgrades(user.cards,user.UpgradeCards);
         }
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("City Wars");
         stage.setScene(scene);
         stage.show();

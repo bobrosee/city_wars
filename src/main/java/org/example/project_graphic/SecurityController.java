@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
@@ -25,6 +26,7 @@ public class SecurityController {
     static Boolean welcome = false;
     public static String asciiMath() {
         Random random = new Random();
+        boolean zeroCheck = false;
         int a = random.nextInt(10) + 1;
         int b = random.nextInt(10) + 1;
         int c = random.nextInt(10) + 1;
@@ -68,17 +70,32 @@ public class SecurityController {
         }
         if (f == 3) {
             if (g == 0) {
-                h = a / e;
-                captcha = Integer.toString(a) + " " + "DIVIDED BY" + " (" + Integer.toString(b) + " " +operations[d] + " " + Integer.toString(c)+") = ";
-
+                if (e != 0) {
+                    h = a / e;
+                    captcha = Integer.toString(a) + " " + "DIVIDED BY" + " (" + Integer.toString(b) + " " + operations[d] + " " + Integer.toString(c) + ") = ";
+                }
+                else {
+                    zeroCheck = true;
+                }
             }
             else {
-                h = e / a;
-                captcha = "(" + Integer.toString(b) + " " +operations[d] + " " + Integer.toString(c)+") " + "DIVIDED BY" + " " + Integer.toString(a) + " = ";
+                if (a != 0) {
+                    h = e / a;
+                    captcha = "(" + Integer.toString(b) + " " + operations[d] + " " + Integer.toString(c) + ") " + "DIVIDED BY" + " " + Integer.toString(a) + " = ";
+                }
+                else {
+                    zeroCheck = true;
+                }
             }
         }
-        answer = h;
-        return captcha;
+        if (zeroCheck) {
+            answer = 16;
+            return ("(4 TIMES 3) PLUS 4 = )");
+        }
+        else {
+            answer = h;
+            return captcha;
+        }
     }
     static String cText = asciiMath();
     static String TheQuestion, TheAnswer;
@@ -86,7 +103,7 @@ public class SecurityController {
 
 
     @FXML
-    ComboBox comboBox;
+    ChoiceBox comboBox;
     @FXML
     ObservableList<String> securityQuestions = FXCollections.observableArrayList("1-What is your father’s name ?",
             "2-What is your favourite color ?",
@@ -96,27 +113,22 @@ public class SecurityController {
     @FXML
     TextField cAnswer;
     @FXML
-    TextField announce;
-    @FXML
     TextField ans;
     @FXML
     TextField confirm;
     @FXML
-    Text result;
+    Text message;
     @FXML
     public void checkAnswer() {
         try {
 
             int cAnswerS = Integer.parseInt(cAnswer.textProperty().get());
             if (cAnswerS == (answer)) {
-                announce.setText("Correct!");
                 String question = comboBox.getValue().toString();
                 String secAnswer = ans.textProperty().get();
                 String confirmA = confirm.textProperty().get();
                 if (!secAnswer.isEmpty() && !confirmA.isEmpty() && !question.isEmpty()) {
                     if (secAnswer.equals(confirmA)) {
-                        result.setFill(Color.GREEN);
-                        result.textProperty().setValue("Done! account created successfully.");
                         TheQuestion = question;
                         TheAnswer = secAnswer;
                         SignupController.Connect.connectToDatabase();
@@ -156,18 +168,15 @@ public class SecurityController {
                     }
                     else {
                         initialize();
-                        result.setFill(Color.RED);
-                        result.textProperty().setValue("Fill the fields correctly.");
+                        message.textProperty().setValue("Fill the fields correctly.");
                     }
                 }
                 else {
                     initialize();
-                    result.setFill(Color.YELLOW);
-                    result.textProperty().setValue("Fill all the fields");
+                    message.textProperty().setValue("Fill all the fields");
 
                 }
             } else {
-                announce.setText("Incorrect!");
                 cText = asciiMath();
                 captcha.textProperty().setValue(asciiMath());
             }

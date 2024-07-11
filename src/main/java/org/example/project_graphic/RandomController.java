@@ -28,7 +28,7 @@ public class RandomController {
     @FXML
     TextField generator;
     @FXML
-    Text randomPass;
+    TextField randomPass;
     @FXML
     TextField confirmation;
     @FXML
